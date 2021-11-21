@@ -1,0 +1,33 @@
+<h1 class="text-center text-black mt-5">Tabelas de Despesas</h1>
+
+<div class="container mt-3 mb-3" *ngFor = "let info of listaDespesas">
+    <table class="rwd-table mt-5 mb-5">
+      <tbody>
+        <tr>
+          <th>Ano</th>
+          <th>Tipo de Serviço</th>
+          <th>Fornecedor do Serviço</th>
+          <th>Data da Despesa</th>
+          <th>Valor da Despesa</th>
+          <th>Link do Documento</th>
+        </tr>
+        <tr>
+          <td data-th="Ano"> {{info.ano}} </td>
+          <td data-th="Tipo de Serviço"> {{info.tipoDespesa}} </td>
+          <td data-th="Fornecedor do Serviço"> {{info.nomeFornecedor}} </td>
+          <td data-th="Data da Despesa"> {{info.dataDocumento}} </td>
+          <td data-th="Valor da Despesa"> R$ {{info.valorLiquido}} </td>
+          <td data-th="Link do Documento"> <a href="{{info.urlDocumento}}" target="blank">{{info.urlDocumento}}</a> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex justify-content-center flex-wrap">
+    <div class="col-md-12 d-flex justify-content-center">
+      <button class="btn btn-info mt-3 ml-lg-3 mb-3" (click)='primPag()'>Primeira Página</button>
+       <button class="btn btn-info mt-3 mb-3 m-lg-1" (click)='anterPag()'>Anterior</button>
+       <button class="btn btn-info mt-3 mb-3 m-lg-1" (click)='proxPag()'>Próxima</button>
+      <button class="btn btn-info mt-3 mb-3" (click)='ultPag()'>Ultima Página</button>
+    </div>
+</div>
