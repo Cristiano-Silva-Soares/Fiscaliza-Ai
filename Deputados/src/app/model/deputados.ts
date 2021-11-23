@@ -1,5 +1,3 @@
-import { ultimoStatus } from "./ultimoStatus";
-
 export class Deputados {
 
     public dados: any[];
@@ -19,6 +17,5 @@ export class Deputados {
     public urlFoto: string;
     public uri: string;
     public uriPartido: string;
-    public ultimoStatus: ultimoStatus ;
      
 }

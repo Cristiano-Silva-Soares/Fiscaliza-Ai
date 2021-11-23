@@ -1,9 +1,6 @@
-.main {
-  width: 50%;
-  margin: 50px auto;
-}
+@import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
 
-/* Bootstrap 4 text input with search icon */
+/* Estilização da Barra de Pesquisa */
 
 .has-search .form-control {
   padding-left: 2.375rem;
@@ -21,123 +18,152 @@
   color: #3a9e3e;
 }
 
+/* Fim - Estilização da Barra de Pesquisa */
 
-.sombra{
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+/* Sombreamento de Itens */
+.sombra {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
-h2{
+/* Fim - Sombreamento de Itens */
+
+/* Estilização dos Cards e seus elementos */
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+h2 {
   color: #3a9e3e;
 }
+
+.container {
+  width: 1200px;
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  width: calc(50% - 20px);
+  min-height: 300px;
+  background: #fff;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.card .imgBx {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+.card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .details {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .details .content {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card .details .content h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 0.85em;
+  font-weight: 600;
+}
+
+.card .details .content h2 span {
+  font-size: 14px;
+  color: #fccc54;
+}
+
+.card .details .content ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.card .details .content ul li {
+  list-style: none;
+  margin-left: 2px;
+}
+
+.card .details .content a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border: 2px solid #3a9e3e;
+  color: #3a9e3e;
+  font-weight: 500;
+}
+
+.card .details .content a:hover {
+  background: #fccc54;
+  color: #fff;
+}
+
+/* Estilização dos Cards e seus elementos */
+
+/* Dimensionamento Para Aparelhos Móveis */
+@media (max-width: 1200px) {
   .container {
-    width: 1200px;
-    min-height: 600px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .card {
-    position: relative;
-    width: calc(50% - 20px);
-    min-height: 300px;
-    background: #fff;
-    margin: 10px;
-    box-sizing: border-box;
-  }
-  .card .imgBx {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-  }
-  .card .imgBx img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
-  .card .details {
-    position: absolute;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+@media (max-width: 991px) {
+  .card {
+    width: calc(70% - 20px);
+    margin: 10px auto;
   }
-  .card .details .content {
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  .card .details .content h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-    line-height: 0.85em;
-    font-weight: 600;
-  }
-  .card .details .content h2 span {
-    font-size: 14px;
-    color: #fccc54;
-  }
-  .card .details .content ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  .card .details .content ul li {
-    list-style: none;
-    margin-left: 2px;
-  }
-  
-  .card .details .content a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 5px 10px;
-    margin-top: 10px;
-    border: 2px solid #3a9e3e;
-    color: #3a9e3e;
-    font-weight: 500;
-  }
-  .card .details .content a:hover {
-    background: #fccc54;
-    color: #fff;
-  }
-  @media (max-width: 1200px) {
-    .container {
-      width: 100%;
-    }
-  }
-  @media (max-width: 991px) {
-    .card {
-      width: calc(70% - 20px);
-      margin: 10px auto;
-    }
-  }
-  @media (max-width: 768px) {
-    .card {
-      width: calc(70% - 20px);
-      margin: 10px auto;
-    }
-    .card .imgBx {
-      position: relative;
-      width: 100%;
-      height: 200px;
-    }
-    .card .details {
-      position: relative;
-      width: 100%;
-      height: 200px;
-    }
-  }
-  @media (max-width: 480px) {
-    .card {
-      width: calc(100% - 40px);
-      margin: 10px auto;
-    }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(70% - 20px);
+    margin: 10px auto;
   }
 
-  botaoP{
-    background-color: #4a90e2;
+  .card .imgBx {
+    position: relative;
+    width: 100%;
+    height: 200px;
   }
+
+  .card .details {
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 40px);
+    margin: 10px auto;
+  }
+}
+
+/* Fim - Dimensionamento Para Aparelhos Móveis */

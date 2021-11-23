@@ -1,6 +1,12 @@
+ /* Sombreamento de Itens */
+
  .sombra {
    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
  }
+
+ /* Fim - Sombreamento de Itens */
+
+ /* Estilização dos Conteúdos do Footer */
 
  img {
    max-width: 100%;
@@ -9,7 +15,6 @@
 
  section {
    padding: 60px 0;
-   /* min-height: 100vh;*/
  }
 
  ul {
@@ -92,3 +97,5 @@
  footer img {
    width: 44px;
  }
+
+ /* Fim - Estilização dos Conteúdos do Footer */

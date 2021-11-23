@@ -24,7 +24,8 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit() {
 
-    
+    window.scroll(0,0)
+
     let id = this.routerAtivo.snapshot.params['id']
     this.pegarIdDeputado(id)
   }

@@ -9,13 +9,6 @@ import { DeputadosService } from './servico/deputados.service';
 export class AppComponent {
   title = 'Fiscaliza Aí';
 
-  constructor(private deputadoService: DeputadosService) {
-
-
-
-  }
-
-  
-  
+  constructor(private deputadoService: DeputadosService) {}
 
 }

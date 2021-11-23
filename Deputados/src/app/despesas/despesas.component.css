@@ -1,6 +1,18 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
 
-* {font-family: 'Open Sans', sans-serif;}
+h1{
+  color: #3a9e3e;
+}
+
+/* Sombreamento de itens */
+
+.sombra {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fim - Sombreamento de Itens */
+
+/* Estilização de Tabelas */
 
 .rwd-table {
   margin: auto;
@@ -68,42 +80,52 @@
 .rwd-table td {
   padding: .5em 1em;
 }
+
+/* Fim - Estilização de Tabelas */
+
+/* (Tentativa) Adaptação para Dispositivos Móveis   */
+
 @media screen and (max-width: 601px) {
   .rwd-table tr:nth-child(2) {
     border-top: none;
   }
 }
+
 @media screen and (min-width: 600px) {
   .rwd-table tr:hover:not(:first-child) {
-    background-color: 
-    #3a9e3e;
+    background-color:
+      #3a9e3e;
   }
+
   .rwd-table td:before {
     display: none;
   }
+
   .rwd-table th,
   .rwd-table td {
     display: table-cell;
     padding: .25em .5em;
   }
+
   .rwd-table th:first-child,
   .rwd-table td:first-child {
     padding-left: 0;
   }
+
   .rwd-table th:last-child,
   .rwd-table td:last-child {
     padding-right: 0;
   }
+
   .rwd-table th,
   .rwd-table td {
     padding: 1em !important;
   }
 }
 
+/* (Tentativa) Fim - Adaptação para Dispositivos Móveis   */
 
-/* THE END OF THE IMPORTANT STUFF */
-
-/* Basic Styling */
+/* (Tentativa) Adaptação para Dispositivos Móveis e estilização   */
 
 .container {
   display: block;
@@ -111,14 +133,39 @@
 }
 
 @-webkit-keyframes leftRight {
-  0%    { -webkit-transform: translateX(0)}
-  25%   { -webkit-transform: translateX(-10px)}
-  75%   { -webkit-transform: translateX(8px)}
-  100%  { -webkit-transform: translateX(0)}
+  0% {
+    -webkit-transform: translateX(0)
+  }
+
+  25% {
+    -webkit-transform: translateX(-10px)
+  }
+
+  75% {
+    -webkit-transform: translateX(8px)
+  }
+
+  100% {
+    -webkit-transform: translateX(0)
+  }
 }
+
 @keyframes leftRight {
-  0%    { transform: translateX(0)}
-  25%   { transform: translateX(-10px)}
-  75%   { transform: translateX(10px)}
-  100%  { transform: translateX(0)}
+  0% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(-10px)
+  }
+
+  75% {
+    transform: translateX(10px)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
 }
+
+/* (Tentativa) Fim - Adaptação para Dispositivos Móveis e estilização   */

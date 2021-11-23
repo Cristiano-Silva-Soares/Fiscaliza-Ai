@@ -13,6 +13,7 @@ export class DespesasComponent implements OnInit {
   despesas: Despesas = new Despesas();
   listaDespesas: Despesas[];
   num: number = 1;
+  numu: number = 1;
   id: number;
 
   constructor( 
@@ -24,8 +25,9 @@ export class DespesasComponent implements OnInit {
 
   ngOnInit() {
 
-    let id = this.routerAtivo.snapshot.params ['id']
-    this.pegarIdDespesas(id)
+    window.scroll(0,0)
+    this.id = this.routerAtivo.snapshot.params ['id']
+    this.pegarIdDespesas(this.id)
   }
 
   pegarIdDespesas(id: number) {
@@ -37,23 +39,23 @@ export class DespesasComponent implements OnInit {
   }
 
   proxPag() {
-    this.num = this.num + 1;
-    if(this.num > 2) {
-      this.num = 2;
+    this.numu = this.numu + 1;
+    if(this.numu > 14) {
+      this.numu = 14;
     }
 
-   this.deputadosServico.getPagDespesas(this.id, this.num).subscribe((resp: Despesas)=> {
+   this.deputadosServico.getPagDespesas(this.id, this.numu).subscribe((resp: Despesas)=> {
      this.listaDespesas = resp.dados;
    })
   }
 
   anterPag() {
-    this.num = this.num - 1;
-    if(this.num < 1) {
-      this.num = 1;
+    this.numu = this.numu - 1;
+    if(this.numu < 1) {
+      this.numu = 1;
     }
 
-    this.deputadosServico.getPagDespesas(this.id, this.num).subscribe((resp: Despesas)=> {
+    this.deputadosServico.getPagDespesas(this.id, this.numu).subscribe((resp: Despesas)=> {
       this.listaDespesas = resp.dados
     })
   }
